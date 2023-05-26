@@ -2,9 +2,6 @@
 import atheris
 import sys
 import fuzz_helpers
-import io
-from contextlib import contextmanager
-
 
 with atheris.instrument_imports():
     from streaming_form_data import StreamingFormDataParser, ParseFailedException

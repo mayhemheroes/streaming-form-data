@@ -6,5 +6,4 @@ testsuite:
 cmds:
   - cmd: /src/mayhem/stream_parse.py
     libfuzzer: true
-    timeout: 10
-
+    timeout = 10
