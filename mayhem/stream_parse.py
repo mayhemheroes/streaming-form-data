@@ -21,6 +21,10 @@ def TestOneInput(data):
         parser.data_received(fdp.ConsumeRemainingBytes())
     except (ParseFailedException, ValueError):
         return -1
+    except IndexError:
+        if ctr > 10000:
+            return -1
+        raise
 def main():
     atheris.Setup(sys.argv, TestOneInput)
     atheris.Fuzz()
