@@ -1,0 +1,9 @@
+project: stream
+target: stream_parse
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/stream_parse.py
+    libfuzzer: true
+    timeout = 10
